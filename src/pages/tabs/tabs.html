@@ -1,0 +1,37 @@
+<!--
+  <ion-menu [content]="mycontent">
+    <ion-content>
+        <ion-list>
+            <p> usuario</p>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-header #myc ></ion-header>
+-->
+
+
+
+<ion-header>
+  <ion-navbar>
+   <!-- <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+     <ion-title>Hire Me</ion-title>
+
+    <ion-buttons end>
+      <button (click)="logOut()">
+        <ion-icon name="log-out"></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-tabs  style="margin-top: 00px;">
+  <ion-tab [root]="tab1Root" tabIcon="add-circle"></ion-tab>
+  <ion-tab [root]="tab2Root" tabIcon= "eye"></ion-tab>
+  <ion-tab [root]="tab3Root" tabIcon= "search"></ion-tab>
+  <ion-tab [root]="tab4Root" tabIcon= "person"></ion-tab>
+</ion-tabs>

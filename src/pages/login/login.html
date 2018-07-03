@@ -1,0 +1,50 @@
+
+<ion-content no-bounce padding id="page1" style="background-color:#FCFCFC;">
+  
+  <div class="spacer" style="height:20px;" id="login-spacer2"></div>
+  <img src="https://static1.squarespace.com/static/594b3048e110eb77f3560d1f/t/594bced16b8f5bb74f325ec4/1524326567437/?format=1500w" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+  <form id="login-form1" #frm ="ngForm" (ngSubmit)="loginUser(frm.value)" >
+    <ion-item id="login-input2">
+      <ion-label>
+        Email
+      </ion-label>
+      <ion-input type="email" ngModel placeholder="abc@xyz.com" name="email"></ion-input>
+    </ion-item>
+    <div class="spacer" style="height:20px;" id="login-spacer8"></div>
+    <ion-item id="login-input3">
+      <ion-label>
+        Password
+      </ion-label>
+      <ion-input type="password" ngModel  placeholder="Password" name="password"></ion-input>
+    </ion-item>
+    <div class="spacer" style="height:20px;" id="login-spacer3"></div>
+    <button type="submit" id="login-button1" ion-button color="positive" block style="border-radius:50px 50px 50px 50px;" >
+      Login
+    </button>
+  </form>
+  <button id="login-button2" ion-button clear color="positive" block style="font-weight:lighter;" (click)="emailPrompt()">
+    Forgot Password?
+  </button>
+  <div id="login-markdown5" style="text-align:center;" class="show-list-numbers-and-dots">
+    <p style="color:#9DBFF9;">
+      or login by
+    </p>
+  </div>
+  <button id="login-button3" ion-button clear color="positive" style="font-weight:lighter;">
+    <ion-icon name="facebook"></ion-icon>
+  </button>
+  <button id="login-button4" ion-button clear color="positive" style="font-weight:lighter;">
+    <ion-icon name="twitter"></ion-icon>
+  </button>
+  <button id="login-button5" ion-button clear color="positive" style="font-weight:lighter;">
+    <ion-icon name="google"></ion-icon>
+  </button>
+ 
+  <div id="login-markdown8" style="text-align:center;" class="show-list-numbers-and-dots">
+    <p style="color:#000000;">
+      Dont&#39;t have an account? <button id="login-button7" ion-button clear color="positive"  style="font-weight:lighter;" on-click="goToSignUp()">
+        Sign up
+      </button>
+    </p>
+  </div>
+</ion-content>

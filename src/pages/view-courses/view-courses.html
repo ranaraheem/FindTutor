@@ -1,0 +1,75 @@
+<!--
+  Generated template for the ViewCoursesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+       <ion-label>Course Title</ion-label>
+              <ion-label name="title"  >{{crs?.createdAt}}</ion-label>  
+              <br>
+            <ion-label>Description</ion-label>
+            <ion-label name="description"  >{{crs.description}}</ion-label>  
+            <br>
+            <ion-icon name="home"></ion-icon>
+            <br>
+            <ion-label>Fees</ion-label>
+            <ion-label> Rs. {{crs.fees}} </ion-label>
+         <br>
+
+          <ion-item-options side="right">
+            
+            <button ion-button color="danger" (click) = "deleteCourse(crs._id)" >
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
+        <ion-item ion-item >
+            
+          </ion-item>
+         
+
+
+<ion-content padding>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content>
+    
+    <ion-list>
+        <ion-item-sliding *ngFor="let grocery of groceries">
+          {{grocery}}
+        </ion-item-sliding>
+      </ion-list>
+    </ion-refresher-content>
+  </ion-refresher>
+  
+</ion-content>
+-->
+
+ 
+    <ion-content  padding>
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content>
+    
+    <ion-list style="margin-top:10px">
+        <ion-item *ngFor="let crs of courses"> 
+          <ion-label>Course Title</ion-label>
+          <ion-label name="title"  >{{crs.createdAt}}</ion-label>  
+          <br>
+        <ion-label>Description</ion-label>
+        <ion-label name="description"  >{{crs.description}}</ion-label>  
+        <br>
+        <ion-icon name="home"></ion-icon>
+        <br>
+        <ion-label>Fees</ion-label>
+        <ion-label> Rs. {{crs.fees}} </ion-label>
+        <ion-item-options side="right">
+            
+            <button ion-button color="danger" (click) = "deleteCourse(crs._id)" >
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
+        
+      </ion-item>
+    </ion-list>
+  </ion-refresher-content>
+</ion-refresher>
+</ion-content>

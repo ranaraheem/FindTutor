@@ -1,0 +1,30 @@
+<ion-content padding id="page5" style="background-color:#FCFCFC;">
+    <form id="basicInformation-form4" #frm ="ngForm" name ="basicForm" (ngSubmit) = "update(frm.value)">
+      <ion-item id="basicInformation-input12">
+        <ion-label>
+          Name
+        </ion-label>
+        <ion-input type="text" [(ngModel)] = "name" placeholder="abc" name="name"></ion-input>
+      </ion-item>
+      <div class="spacer" style="height:20px;" id="basicInformation-spacer15"></div>
+  
+        <div class="spacer" style="height:20px;" id="basicInformation-spacer16"></div>
+      <ion-item id="basicInformation-input16">
+        <ion-label>
+          Contact Number
+        </ion-label>
+        <ion-input type="tel" [(ngModel)] = "contact" placeholder="        +921231234567" name="contact"></ion-input>
+      </ion-item>
+      <div class="spacer" style="height:20px;" id="basicInformation-spacer17"></div>
+      <button  id="basicInformation-button15" type="submit" ion-button color="positive" block icon-right style="border-radius:50px 50px 50px 50px;">
+        Update
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+  
+     
+    </form>
+   
+    <!-- div>
+      <img [src]="imgs" />
+    </div -->
+  </ion-content>

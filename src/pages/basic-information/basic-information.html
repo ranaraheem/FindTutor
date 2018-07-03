@@ -1,0 +1,54 @@
+<ion-content padding id="page5" style="background-color:#FCFCFC;">
+  <img src="assets/img/WgeSGQ8zTPWR4u4vIJjx_UploadPhotos.png" style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;" />
+  <form id="basicInformation-form4" #frm ="ngForm" name ="basicForm" (ngSubmit) = "submit(frm.value)">
+    <ion-item id="basicInformation-input12">
+      <ion-label>
+        Name
+      </ion-label>
+      <ion-input type="text" ngModel placeholder="abc" name="name"></ion-input>
+    </ion-item>
+    <div class="spacer" style="height:20px;" id="basicInformation-spacer15"></div>
+    <ion-list radio-group ngModel name="gender">
+
+      <ion-list-header>
+        Gender
+      </ion-list-header>
+    
+      <ion-item>
+        <ion-label>Male</ion-label>
+        <ion-radio value="male"></ion-radio>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Female</ion-label>
+        <ion-radio value="female"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+      <div class="spacer" style="height:20px;" id="basicInformation-spacer16"></div>
+    <ion-item id="basicInformation-input16">
+      <ion-label>
+        Contact Number
+      </ion-label>
+      <ion-input type="tel" ngModel placeholder="        +921231234567" name="contact"></ion-input>
+    </ion-item>
+    <div class="spacer" style="height:20px;" id="basicInformation-spacer17"></div>
+    <button [disabled] ='ckh' id="basicInformation-button15" type="submit" ion-button color="positive" block icon-right style="border-radius:50px 50px 50px 50px;">
+      Submit
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+
+   
+  </form>
+  <button id="basicInformation-button15" (click)="takePicture()" type="submit" ion-button color="positive" block icon-right style="border-radius:50px 50px 50px 50px;">
+      Upload
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  <button id="basicInformation-button15" (click)="educationlevel()" type="submit" ion-button color="positive" block icon-right style="border-radius:50px 50px 50px 50px;">
+    Education Level
+    <ion-icon name="arrow-forward"></ion-icon>
+  </button>
+  <div>
+    <img [src]="imgs" />
+  </div>
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-content padding id="page3" style="background-color:#FCFCFC;">
+  <img src="https://static1.squarespace.com/static/594b3048e110eb77f3560d1f/t/594bced16b8f5bb74f325ec4/1524326567437/?format=1500w" style="display:block;width:100%;height:200px;margin-left:auto;margin-right:auto;" />
+  <div class="spacer" style="height:20px;" id="signUp-spacer6"></div>
+    
+  <form id="signUp-form2" #signUpfrm="ngForm" (ngSubmit) = "CreateUser(signUpfrm.value)">
+  
+    <ion-item id="signUp-input5">
+      <ion-label>
+        Email
+      </ion-label>
+      <ion-input type="email" #eml ngModel placeholder="Email Address" name="email" (blur)="checkEmailAvailability(eml.value)"  ></ion-input>
+    </ion-item>
+    <div class="spacer" style="height:20px;" id="signUp-spacer6"></div>
+    <ion-item id="signUp-input6">
+      <ion-label>
+        Password
+      </ion-label>
+      <ion-input type="password" ngModel placeholder="Password" name="password"></ion-input>
+    </ion-item>
+    <div class="spacer" style="height:20px;" id="signUp-spacer7"></div>
+    <ion-item id="signUp-input7">
+      <ion-label>
+        Re-enter Password
+      </ion-label>
+      <ion-input type="password" #repassword ngModel placeholder="  Password" name="reenterPassword"></ion-input>
+    </ion-item>
+    <div class="spacer" style="height:20px;" id="signUp-spacer5"></div>
+    
+    <button id="signUp-button8" type="submit" ion-button color="secondary" block >
+      Sign Up
+    </button>
+    <!-- div id="signUp-markdown11" class="show-list-numbers-and-dots">
+      
+    </div -->
+  </form>
+
+  <div class="spacer" style="height:5px;" id="signUp-spacer5"></div>
+    
+  <button id="signUp-button8" type="submit" ion-button (click)="login()"  color="danger" block>
+      Login
+    </button>
+</ion-content>

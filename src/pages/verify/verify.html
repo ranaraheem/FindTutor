@@ -1,0 +1,17 @@
+<ion-content no-bounce padding id="page1" style="background-color:#FCFCFC;">
+  <div class="spacer" style="height:20px;" id="login-spacer2"></div>
+  <img src="assets/img/03xQwvKzQtKN2LIERlfg_ionic.png" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+  <form id="login-form1" #frm ="ngForm" (ngSubmit)="VerifyUser(frm.value)" >
+    <ion-item id="login-input2">
+      <ion-label>
+        Verfication Code
+      </ion-label>
+      <ion-input type="number" ngModel placeholder="1234" name="code"></ion-input>
+    </ion-item>
+    <div class="spacer" style="height:20px;" id="login-spacer8"></div>
+    <button type="submit" id="button1" ion-button color="positive" block style="border-radius:50px 50px 50px 50px;" >
+      Verify
+    </button>
+  </form>
+  
+</ion-content>

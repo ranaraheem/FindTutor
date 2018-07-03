@@ -1,0 +1,40 @@
+<ion-content no-bounce padding id="page1" style="background-color:#FCFCFC; margin-top: 70px;">
+
+  <form #frm ="ngForm" (ngSubmit)="createCourse(frm.value)">
+      <ion-item>
+        <select-searchable name= "course"
+            title="Select Course"
+            [(ngModel)]="port"
+            [items]="ports"
+            itemValueField="_id"
+            itemTextField="name"
+            [canSearch]="true"
+            (onChange)="portChange($event)" >
+        </select-searchable>
+      
+      </ion-item>
+      <button type="button" (click)="newCourse()" color="light" ion-button icon-start padding block style="margin-top:10px">
+        <ion-icon name="add-circle"></ion-icon>
+        Add new Course 
+      </button>
+
+  <ion-item>
+  <ion-label>Description</ion-label>
+      <ion-textarea name="description" ngModel style="height:60px !important;"></ion-textarea>  
+    </ion-item>
+  <ion-item>
+    <ion-label>Home Tution</ion-label>
+    <ion-toggle ngModel name="isHomeTution" [(ngModel)] ="toggle"  ></ion-toggle>
+  </ion-item>
+  <ion-item >
+    <ion-label>
+      Fees
+    </ion-label>
+    <ion-input type="number" ngModel placeholder="Rs." name="fees"></ion-input>
+  </ion-item>
+
+  <button type="submit"  ion-button color="positive" block padding style="margin-top:30px">
+      Create Course
+    </button>
+  </form>
+</ion-content>
